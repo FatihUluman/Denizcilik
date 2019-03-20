@@ -1,0 +1,70 @@
+﻿@model MvcWep.Models.Veriler
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title Uluman Denizcilik</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="~/Content/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="~/Content/css/agency.min.css" rel="stylesheet" />
+
+    <link href="~/Content/css/agency.css" rel="stylesheet" />
+
+    <link href="~/Content/Site.css" rel="stylesheet" />
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <div class="navbar-brand page-scroll">@Html.ActionLink("Uluman Denizcilik", "Index", "Home")</div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse">
+                <div class="nav navbar-nav navbar-right">
+                    @using (@Html.BeginForm("Giris", "Home"))
+                    {
+                        <label style="color:#fed136">Email</label>
+                        @Html.TextBoxFor(m => m.Email)
+                        <label style="color:#fed136">Password</label>
+                        @Html.TextBoxFor(m => m.Password)
+                        <input type="submit" value="Giris" class="btn-xs" style="background-color:#fed136" />                     
+                        @Html.ActionLink("Üye Ol", "UyeEkle", "Home", new { @class = "btn-xs", @style = "background-color:#fed136" })
+                    }
+                </div>
+              
+            </div>
+            
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year -Uluman Denizcilik</p>
+        </footer>
+    </div>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

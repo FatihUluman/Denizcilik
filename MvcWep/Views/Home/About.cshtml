@@ -1,0 +1,88 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+ }
+<head>
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="~/Content/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="~/Content/css/agency.min.css" rel="stylesheet">
+</head>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Hakkımızda</h2>
+            <h3 class="section-subheading text-muted">Biz Kimiz?</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-image">
+                        <img class="img-circle img-responsive" src="~/Images/img/about/hakkımız.jpg" alt="">
+                    </div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+
+                            <h4 class="subheading">Nasıl başladık?</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">Herşey suyun kenarında balık tutarak başladı.Önce oltamızı soktuk denize sonra ruhumuzu.Küçük sandallarla denize açılmak yetmedi bir süre sonra ve gemiler yapmaya karar verdik.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image">
+                        <img class="img-circle img-responsive" src="~/Images/img/about/gemi1.jpg" alt="">
+                    </div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+
+                            <h4 class="subheading">Neden Gemi Yapıyoruz?</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">Çünkü gemi yapmayı seviyoruz.Hayalimiz hep gemi yapmaktı ve yapıyoruz.Şimdiki hayalimiz ise sizin hayallerinizi gerçekleştirmek</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-image">
+                        <img class="img-circle img-responsive" src="~/Images/img/about/gemi2.jpg" alt="">
+                    </div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+
+                            <h4 class="subheading">Size Nasıl Ulaşabilirim?</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">İletişim sayfasında ileşim bilgilerimiz mevcuttur.Bize burada ulaşıp her türlü sorularınızı sorabilirsiniz.İ</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image">
+                        <img class="img-circle img-responsive" src="~/Images/img/about/gemi3.jpg" alt="">
+                    </div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+
+                            <h4 class="subheading">Fiyatlar Nedir?</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">Herhangi bir fiyat standardımız yoktur.İstediğiniz gemiye,tekneye,sandala,yata istediğiniz özelliklere göre fiyat değişir.Gerçekçi olmak gerekirse ücretini ödediğiz sürece her gemi sizin olabilir.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<center>
+    <h6>
+        @Html.ActionLink("İletişime Geç", "Contact", "Home")
+    </h6>
+</center>
